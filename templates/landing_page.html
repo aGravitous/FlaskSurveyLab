@@ -2,4 +2,11 @@
 
 {% block title %} {{ title_of_survey }} {% endblock%}
 
-{% block content %} <h1>{{ title_of_survey }}</h1><p>{{ survey_instructions }}</p> </form>{% endblock %}
+{% block content %} 
+<h1>{{ title_of_survey }}</h1>
+<p>{{ survey_instructions }}</p> 
+{% endblock %}
+
+{% block question_index %}0{% endblock %}
+
+{% block form_content%} <button>Start</button> {% endblock %}

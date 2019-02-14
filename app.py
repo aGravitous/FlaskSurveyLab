@@ -12,3 +12,8 @@ def landing_screen():
     survey_instructions = surveys.satisfaction_survey.instructions
     return render_template('landing_page.html', title_of_survey=title_of_survey, survey_instructions=survey_instructions)
 
+
+@app.route('/questions/0')
+def testing():
+    ''''''
+    return render_template('base.html')
