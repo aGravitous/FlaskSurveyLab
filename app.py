@@ -7,6 +7,7 @@ app.secret_key = "Vive La France"
 
 debug = DebugToolbarExtension(app)
 
+
 @app.route('/')
 def landing_screen():
     '''display screen with title, instructions, and start button'''
