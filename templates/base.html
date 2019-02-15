@@ -7,9 +7,14 @@
     <title>{% block title %}TITLE GOES HERE{% endblock %}</title>
 </head>
 <body>
-    {% block content %} content goes here {% endblock %}
+    {% for msg in get_flashed_messages() %}
+        <p>{{ msg }}</p>
+    {% endfor %}
+
+    {% block content %} {% endblock %}
+  
     <form action='/questions/{% block question_index %} {% endblock %}' method='post'>
-        {% block form_content%} form content goes here {% endblock %}
+        {% block form_content%}{% endblock %}
     </form>
     
 </body>
