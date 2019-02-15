@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ title_of_survey }} {% endblock%}
+
+{% block content %} 
+<h1>{{ title_of_survey }}</h1>
+{% endblock %}
+
+{% block question_index %}{{new_question_i}}{% endblock %}
+
+{% block form_content%}
+
+<p>{{ question_text }}</p>
+{% for choice in choice_list %}
+
+<input type="radio" id="{{choice}}" name="choice" value="{{choice}}">
+<label for="{{choice}}">{{choice}}</label>
+
+
+{% endfor %}
+<button>Continue</button> {% endblock %}
